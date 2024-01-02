@@ -1,0 +1,197 @@
+<script>
+  $(document).ready(function () {
+    function setModelBarPosition() {
+      var windowWidth = $(window).width();
+      var scrollPosition = $(window).scrollTop();
+      var headerWrapperHeight = $(".headerWrapper").outerHeight();
+      var navbarHeaderHeight = $("#navbar-header").outerHeight();
+
+      if (windowWidth >= 993) {
+        if ($(".headerWrapper").css("position") === "relative") {
+          $("#modelBarToyota").css({
+            position: "relative",
+            left: "0",
+            top: "249px",
+          });
+        } else {
+          $("#modelBarToyota").css({
+            position: "relative",
+            top: "0px",
+            left: "-143px",
+          });
+          if (scrollPosition >= headerWrapperHeight) {
+            $("#modelBarToyota").css({
+              position: "fixed",
+              top: "101px",
+              left: "0",
+            });
+          } else {
+            $("#modelBarToyota").css({
+              position: "relative",
+              top: "0px",
+            });
+          }
+        }
+      } else if (windowWidth <= 992 && windowWidth <= 1199) {
+        if ($(".headerWrapper").css("position") === "relative") {
+          $("#modelBarToyota").css({
+            position: "relative",
+            left: "0",
+            top: "249px",
+          });
+        } else {
+          $("#modelBarToyota").css({
+            position: "relative",
+            top: "0px",
+            left: "-143px",
+            width: "calc(100vw + 114px)",
+          });
+          if (scrollPosition >= headerWrapperHeight) {
+            $("#modelBarToyota").css({
+              position: "fixed",
+              top: "101px",
+              left: "0",
+            });
+          } else {
+            $("#modelBarToyota").css({
+              position: "relative",
+              top: "0px",
+            });
+          }
+        }
+      } else if (windowWidth >= 768 && windowWidth <= 992) {
+        if (headerWrapperHeight === 0) {
+          $("#modelBarToyota").css({
+            position: "fixed",
+            top: "108px",
+            left: "0",
+          });
+        } else {
+          $("#modelBarToyota").css({
+            left: "0",
+            position: "relative",
+            top: "0px",
+          });
+          if (scrollPosition >= headerWrapperHeight) {
+            $("#modelBarToyota").css({
+              position: "fixed",
+              top: navbarHeaderHeight + "px",
+            });
+          } else {
+            $("#modelBarToyota").css({
+              position: "relative",
+              top: "0px",
+            });
+          }
+        }
+      } else if (windowWidth <= 767) {
+        if (scrollPosition > 70) {
+          $("#modelBarToyota").css({
+            position: "fixed",
+            left: "0",
+            width: "calc(100vw + 0px)",
+            top: navbarHeaderHeight + "px",
+          });
+        } else {
+          $("#modelBarToyota").css({
+            position: "relative",
+            width: "calc(100vw + 0px)",
+            top: "0px",
+            left: "-15px",
+          });
+        }
+      }
+    }
+
+    setModelBarPosition();
+
+    $(window).on("resize scroll", function () {
+      setModelBarPosition();
+    });
+  });
+</script>
+
+<!-- el bueno -->
+<script>
+  $(document).ready(function () {
+    function setModelBarPosition() {
+      var windowWidth = $(window).width();
+      var scrollPosition = $(window).scrollTop();
+      var headerWrapperHeight = $(".headerWrapper").outerHeight();
+      var navbarHeaderHeight = $("#navbar-header").outerHeight();
+
+      if (windowWidth >= 992) {
+        if ($(".headerWrapper").css("position") === "relative") {
+          $("#modelBarToyota").css({
+            position: "relative",
+            left: "0",
+            top: "249px",
+          });
+        } else {
+          $("#modelBarToyota").css({
+            position: "relative",
+            top: "0px",
+            left: "-13.2%",
+          });
+          if (scrollPosition >= headerWrapperHeight) {
+            $("#modelBarToyota").css({
+              position: "fixed",
+              top: "101px",
+              left: "0",
+            });
+          } else {
+            $("#modelBarToyota").css({
+              position: "relative",
+              top: "0px",
+            });
+          }
+        }
+      } else if (windowWidth >= 768 && windowWidth <= 992) {
+        if (headerWrapperHeight === 0) {
+          $("#modelBarToyota").css({
+            position: "fixed",
+            top: "108px",
+            left: "0",
+          });
+        } else {
+          $("#modelBarToyota").css({
+            left: "0",
+            position: "relative",
+            top: "0px",
+          });
+          if (scrollPosition >= headerWrapperHeight) {
+            $("#modelBarToyota").css({
+              position: "fixed",
+              top: navbarHeaderHeight + "px",
+            });
+          } else {
+            $("#modelBarToyota").css({
+              position: "relative",
+              top: "0px",
+            });
+          }
+        }
+      } else if (windowWidth <= 767) {
+        if (scrollPosition > 70) {
+          $("#modelBarToyota").css({
+            position: "fixed",
+            left: "0",
+            top: navbarHeaderHeight + "px",
+          });
+        } else {
+          $("#modelBarToyota").css({
+            position: "relative",
+            top: "0px",
+            left: "-15px",
+          });
+        }
+      }
+    }
+
+    setModelBarPosition();
+
+    $(window).on("resize scroll", function () {
+      setModelBarPosition();
+    });
+  });
+</script>
